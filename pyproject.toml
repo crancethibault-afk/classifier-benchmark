@@ -1,0 +1,9 @@
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+# Avertissements parasites de numpy 2.0 + Accelerate (macOS), voir run_benchmark.py.
+filterwarnings = [
+    "ignore:divide by zero encountered in matmul:RuntimeWarning",
+    "ignore:overflow encountered in matmul:RuntimeWarning",
+    "ignore:invalid value encountered in matmul:RuntimeWarning",
+]
